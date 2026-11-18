@@ -1,0 +1,67 @@
+# Every Monday, looks for popular new AI extensions, drafts catalog entries for any that
+# ShadowSweep doesn't recognize, checks them, and opens a pull request for you to review.
+# Merging the pull request publishes the update automatically.
+name: Discover new AI tools
+
+on:
+  schedule:
+    - cron: '17 13 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Build the signing tool
+        run: dotnet build signer -c Release -o "$RUNNER_TEMP/signer"
+
+      - name: Find new AI tools
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SIGNER: ${{ runner.temp }}/signer/sswkeygen.dll
+          REPORT: ${{ runner.temp }}/discovery-report.md
+        run: python scripts/discover.py
+
+      - name: Open a pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPORT: ${{ runner.temp }}/discovery-report.md
+        run: |
+          git config user.name "ShadowSweep catalog bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if git diff --quiet -- catalog.json; then
+            echo "No new AI tools this week."
+            # Record the check. GitHub turns off scheduled jobs in repositories with no activity for 60 days,
+            # so this small commit keeps the weekly check running during quiet periods.
+            date -u '+%Y-%m-%d %H:%M UTC' > last-checked.txt
+            git add last-checked.txt
+            git commit -m "Weekly check: no new AI tools" > /dev/null
+            git push origin HEAD:main
+            exit 0
+          fi
+
+          branch="discover/$(date -u +%Y-%m-%d)"
+          git checkout -B "$branch"
+          git add catalog.json
+          git commit -m "Add newly discovered AI tools"
+          git push --force -u origin "$branch"
+          if gh pr view "$branch" > /dev/null 2>&1; then
+            gh pr edit "$branch" --body-file "$REPORT"
+          else
+            gh pr create --base main --head "$branch" --title "New AI tools found ($(date -u '+%B %-d, %Y'))" --body-file "$REPORT"
+          fi

@@ -1,0 +1,19 @@
+# Runs the catalog checks on every proposed change. A pull request can't be merged
+# safely while this shows a red X: open the run to see exactly what to fix.
+name: Check catalog
+
+on:
+  pull_request:
+    paths: ['catalog.json', 'safe-app-names.txt', 'signer/**']
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Check catalog.json
+        run: dotnet run --project signer -c Release -- catalog-validate --in catalog.json

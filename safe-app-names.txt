@@ -1,0 +1,92 @@
+# Common apps and extensions that are NOT AI tools. The catalog checks fail if any AI pattern matches one of these.
+# One name per line. Add any false alarm you or a customer reports.
+Google Chrome
+Microsoft Edge
+Mozilla Firefox
+Opera Stable
+Brave
+Vivaldi
+Microsoft Visual Studio Code
+Visual Studio Community 2026
+Notepad++
+7-Zip 24.08 (x64)
+VLC media player
+Spotify
+Steam
+Discord
+WhatsApp
+Telegram Desktop
+Signal
+Zoom Workplace
+Microsoft Teams
+Slack
+Skype
+Dropbox
+Google Drive
+OneDrive
+Microsoft OneDrive
+iCloud
+Adobe Acrobat (64-bit)
+Adobe Acrobat Reader
+Adobe Photoshop 2026
+Adobe Creative Cloud
+LibreOffice
+Microsoft 365 Apps for business - en-us
+Microsoft Office Professional Plus 2021 - en-us
+Python 3.13.1 (64-bit)
+Node.js
+Git
+GitHub Desktop
+Docker Desktop
+PowerToys (Preview)
+Windows Terminal
+Microsoft .NET SDK 10.0.100 (x64)
+Java 8 Update 451
+NVIDIA Graphics Driver 581.57
+NVIDIA app
+Realtek High Definition Audio Driver
+Intel(R) Graphics Driver
+AMD Software
+Logitech G HUB
+Corsair iCUE
+Malwarebytes
+Bitdefender Total Security
+Norton 360
+McAfee LiveSafe
+CCleaner
+Paint.NET
+GIMP 3.0
+Audacity 3.7
+OBS Studio
+HandBrake
+WinRAR
+Evernote
+Todoist
+Trello
+Asana
+Gemini Exchange
+Gemini Wallet
+Otterbox Device Manager
+Jasper Reports Server
+Monica Banking
+Merlin Bird ID
+uBlock Origin
+AdBlock — block ads across the web
+LastPass: Free Password Manager
+Bitwarden Password Manager
+1Password – Password Manager
+Dark Reader
+Honey: Automatic Coupons & Rewards
+Google Translate
+Grammar and spelling checker by LanguageTool
+React Developer Tools
+Python
+Pylance
+C#
+GitLens — Git supercharged
+Prettier - Code formatter
+ESLint
+Live Server
+Docker
+Remote - SSH
+Jupyter

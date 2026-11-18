@@ -1,0 +1,1100 @@
+{
+  "version": 1,
+  "published": "",
+  "notes": "Edit this file and commit. The Publish workflow validates, versions, signs and publishes it automatically.",
+  "signatures": [
+    {
+      "id": "rewind",
+      "name": "Rewind",
+      "vendor": "Rewind AI",
+      "toolType": "AI screen & activity recorder",
+      "risk": "Critical",
+      "dataExposure": "Continuous screenshots or recordings of everything on your screen, which can include passwords, messages, and financial details.",
+      "pattern": "\\bRewind ?AI\\b|\\bRewind\\.ai\\b|^Rewind$",
+      "exclude": null,
+      "domains": [
+        "rewind.ai"
+      ]
+    },
+    {
+      "id": "limitless",
+      "name": "Limitless",
+      "vendor": "Limitless AI",
+      "toolType": "AI screen & activity recorder",
+      "risk": "Critical",
+      "dataExposure": "Continuous screenshots or recordings of everything on your screen, which can include passwords, messages, and financial details.",
+      "pattern": "\\bLimitless( ?AI|\\.ai)\\b|^Limitless$",
+      "exclude": null,
+      "domains": [
+        "limitless.ai"
+      ]
+    },
+    {
+      "id": "screenpipe",
+      "name": "Screenpipe",
+      "vendor": "Mediar",
+      "toolType": "AI screen & activity recorder",
+      "risk": "Critical",
+      "dataExposure": "Continuous screenshots or recordings of everything on your screen, which can include passwords, messages, and financial details.",
+      "pattern": "\\bscreenpipe\\b",
+      "exclude": null,
+      "domains": [
+        "screenpi.pe"
+      ]
+    },
+    {
+      "id": "comet",
+      "name": "Comet",
+      "vendor": "Perplexity",
+      "toolType": "AI-powered web browser",
+      "risk": "High",
+      "dataExposure": "Your browsing activity and, when the AI acts for you, pages you are signed in to.",
+      "pattern": "\\bComet\\b.*\\bPerplexity\\b|\\bPerplexity\\b.*\\bComet\\b|^Comet$|^comet\\.exe$",
+      "exclude": null,
+      "domains": []
+    },
+    {
+      "id": "atlas",
+      "name": "ChatGPT Atlas",
+      "vendor": "OpenAI",
+      "toolType": "AI-powered web browser",
+      "risk": "High",
+      "dataExposure": "Your browsing activity and, when the AI acts for you, pages you are signed in to.",
+      "pattern": "\\bChatGPT Atlas\\b|^Atlas\\.exe$",
+      "exclude": null,
+      "domains": []
+    },
+    {
+      "id": "dia",
+      "name": "Dia",
+      "vendor": "The Browser Company",
+      "toolType": "AI-powered web browser",
+      "risk": "High",
+      "dataExposure": "Your browsing activity and, when the AI acts for you, pages you are signed in to.",
+      "pattern": "^Dia( Browser)?$|\\bThe Browser Company\\b",
+      "exclude": null,
+      "domains": [
+        "diabrowser.com"
+      ]
+    },
+    {
+      "id": "otter",
+      "name": "Otter.ai",
+      "vendor": "Otter.ai",
+      "toolType": "AI meeting recorder",
+      "risk": "High",
+      "dataExposure": "Audio from your meetings and calls, transcripts, attendee names, and often your calendar.",
+      "pattern": "\\bOtter(\\.ai| ?AI)?\\b",
+      "exclude": null,
+      "domains": [
+        "otter.ai"
+      ]
+    },
+    {
+      "id": "fireflies",
+      "name": "Fireflies.ai",
+      "vendor": "Fireflies.ai",
+      "toolType": "AI meeting recorder",
+      "risk": "High",
+      "dataExposure": "Audio from your meetings and calls, transcripts, attendee names, and often your calendar.",
+      "pattern": "\\bFireflies(\\.ai)?\\b",
+      "exclude": null,
+      "domains": [
+        "fireflies.ai"
+      ]
+    },
+    {
+      "id": "fathom",
+      "name": "Fathom",
+      "vendor": "Fathom Video",
+      "toolType": "AI meeting recorder",
+      "risk": "High",
+      "dataExposure": "Audio from your meetings and calls, transcripts, attendee names, and often your calendar.",
+      "pattern": "\\bFathom( ?AI| Notetaker| Video)?\\b",
+      "exclude": "\\banalytics\\b",
+      "domains": [
+        "fathom.video"
+      ]
+    },
+    {
+      "id": "tldv",
+      "name": "tl;dv",
+      "vendor": "tl;dv",
+      "toolType": "AI meeting recorder",
+      "risk": "High",
+      "dataExposure": "Audio from your meetings and calls, transcripts, attendee names, and often your calendar.",
+      "pattern": "\\btl;?dv\\b",
+      "exclude": null,
+      "domains": [
+        "tldv.io"
+      ]
+    },
+    {
+      "id": "readai",
+      "name": "Read AI",
+      "vendor": "Read AI",
+      "toolType": "AI meeting recorder",
+      "risk": "High",
+      "dataExposure": "Audio from your meetings and calls, transcripts, attendee names, and often your calendar.",
+      "pattern": "\\bRead\\.ai\\b|\\bRead AI\\b",
+      "exclude": null,
+      "domains": [
+        "read.ai"
+      ]
+    },
+    {
+      "id": "granola",
+      "name": "Granola",
+      "vendor": "Granola",
+      "toolType": "AI meeting recorder",
+      "risk": "High",
+      "dataExposure": "Audio from your meetings and calls, transcripts, attendee names, and often your calendar.",
+      "pattern": "\\bGranola\\b",
+      "exclude": null,
+      "domains": [
+        "granola.ai",
+        "granola.so"
+      ]
+    },
+    {
+      "id": "krisp",
+      "name": "Krisp",
+      "vendor": "Krisp",
+      "toolType": "AI meeting recorder",
+      "risk": "Medium",
+      "dataExposure": "Microphone audio during calls, and meeting transcripts when AI notes are turned on.",
+      "pattern": "\\bKrisp\\b",
+      "exclude": null,
+      "domains": [
+        "krisp.ai"
+      ]
+    },
+    {
+      "id": "jamie",
+      "name": "Jamie",
+      "vendor": "Jamie",
+      "toolType": "AI meeting recorder",
+      "risk": "High",
+      "dataExposure": "Audio from your meetings and calls, transcripts, attendee names, and often your calendar.",
+      "pattern": "\\bmeetjamie\\b|^Jamie( AI)?$",
+      "exclude": null,
+      "domains": [
+        "meetjamie.ai"
+      ]
+    },
+    {
+      "id": "githubcopilot",
+      "name": "GitHub Copilot",
+      "vendor": "GitHub (Microsoft)",
+      "toolType": "AI coding assistant",
+      "risk": "Medium",
+      "dataExposure": "Source code in the projects you open, terminal output, and anything you paste into its chat. Some modes can run commands on your PC.",
+      "pattern": "\\bGitHub Copilot\\b|^github\\.copilot",
+      "exclude": null,
+      "domains": [
+        "githubcopilot.com",
+        "copilot-proxy.githubusercontent.com"
+      ]
+    },
+    {
+      "id": "cline",
+      "name": "Cline",
+      "vendor": "Cline",
+      "toolType": "AI coding assistant",
+      "risk": "Medium",
+      "dataExposure": "Source code in the projects you open, terminal output, and anything you paste into its chat. Some modes can run commands on your PC.",
+      "pattern": "\\bCline\\b|saoudrizwan\\.claude-dev",
+      "exclude": null,
+      "domains": []
+    },
+    {
+      "id": "roocode",
+      "name": "Roo Code",
+      "vendor": "Roo Code",
+      "toolType": "AI coding assistant",
+      "risk": "Medium",
+      "dataExposure": "Source code in the projects you open, terminal output, and anything you paste into its chat. Some modes can run commands on your PC.",
+      "pattern": "\\bRoo ?Code\\b|rooveterinaryinc\\.",
+      "exclude": null,
+      "domains": []
+    },
+    {
+      "id": "kilocode",
+      "name": "Kilo Code",
+      "vendor": "Kilo Code",
+      "toolType": "AI coding assistant",
+      "risk": "Medium",
+      "dataExposure": "Source code in the projects you open, terminal output, and anything you paste into its chat. Some modes can run commands on your PC.",
+      "pattern": "\\bKilo ?Code\\b",
+      "exclude": null,
+      "domains": [
+        "kilocode.ai"
+      ]
+    },
+    {
+      "id": "claudecode",
+      "name": "Claude Code",
+      "vendor": "Anthropic",
+      "toolType": "AI coding assistant",
+      "risk": "Medium",
+      "dataExposure": "Source code in the projects you open, terminal output, and anything you paste into its chat. Some modes can run commands on your PC.",
+      "pattern": "\\bClaude Code\\b|anthropic\\.claude-code",
+      "exclude": null,
+      "domains": []
+    },
+    {
+      "id": "codex",
+      "name": "OpenAI Codex",
+      "vendor": "OpenAI",
+      "toolType": "AI coding assistant",
+      "risk": "Medium",
+      "dataExposure": "Source code in the projects you open, terminal output, and anything you paste into its chat. Some modes can run commands on your PC.",
+      "pattern": "\\bCodex\\b.*\\bOpenAI\\b|\\bOpenAI\\b.*\\bCodex\\b|^openai\\.chatgpt$",
+      "exclude": null,
+      "domains": []
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "vendor": "Anysphere",
+      "toolType": "AI coding assistant",
+      "risk": "Medium",
+      "dataExposure": "Source code in the projects you open, terminal output, and anything you paste into its chat. Some modes can run commands on your PC.",
+      "pattern": "\\bAnysphere\\b|^Cursor(\\.exe)?$|^Cursor \\(User\\)$",
+      "exclude": null,
+      "domains": [
+        "cursor.sh",
+        "cursor.com",
+        "cursorapi.com"
+      ]
+    },
+    {
+      "id": "windsurf",
+      "name": "Windsurf",
+      "vendor": "Windsurf (Codeium)",
+      "toolType": "AI coding assistant",
+      "risk": "Medium",
+      "dataExposure": "Source code in the projects you open, terminal output, and anything you paste into its chat. Some modes can run commands on your PC.",
+      "pattern": "\\bWindsurf\\b",
+      "exclude": null,
+      "domains": [
+        "windsurf.com",
+        "codeium.com"
+      ]
+    },
+    {
+      "id": "codeium",
+      "name": "Codeium",
+      "vendor": "Codeium",
+      "toolType": "AI coding assistant",
+      "risk": "Medium",
+      "dataExposure": "Source code in the projects you open, terminal output, and anything you paste into its chat. Some modes can run commands on your PC.",
+      "pattern": "\\bCodeium\\b",
+      "exclude": null,
+      "domains": [
+        "codeium.com"
+      ]
+    },
+    {
+      "id": "tabnine",
+      "name": "Tabnine",
+      "vendor": "Tabnine",
+      "toolType": "AI coding assistant",
+      "risk": "Medium",
+      "dataExposure": "Source code in the projects you open, terminal output, and anything you paste into its chat. Some modes can run commands on your PC.",
+      "pattern": "\\bTabnine\\b",
+      "exclude": null,
+      "domains": [
+        "tabnine.com"
+      ]
+    },
+    {
+      "id": "continue",
+      "name": "Continue",
+      "vendor": "Continue",
+      "toolType": "AI coding assistant",
+      "risk": "Medium",
+      "dataExposure": "Source code in the projects you open, terminal output, and anything you paste into its chat. Some modes can run commands on your PC.",
+      "pattern": "^continue\\.continue$|^Continue - ",
+      "exclude": null,
+      "domains": []
+    },
+    {
+      "id": "amazonq",
+      "name": "Amazon Q",
+      "vendor": "Amazon Web Services",
+      "toolType": "AI coding assistant",
+      "risk": "Medium",
+      "dataExposure": "Source code in the projects you open, terminal output, and anything you paste into its chat. Some modes can run commands on your PC.",
+      "pattern": "\\bAmazon Q\\b|amazon-q-vscode|\\bCodeWhisperer\\b",
+      "exclude": null,
+      "domains": []
+    },
+    {
+      "id": "geminicode",
+      "name": "Gemini Code Assist",
+      "vendor": "Google",
+      "toolType": "AI coding assistant",
+      "risk": "Medium",
+      "dataExposure": "Source code in the projects you open, terminal output, and anything you paste into its chat. Some modes can run commands on your PC.",
+      "pattern": "\\bGemini Code Assist\\b|google\\.geminicodeassist",
+      "exclude": null,
+      "domains": []
+    },
+    {
+      "id": "supermaven",
+      "name": "Supermaven",
+      "vendor": "Supermaven",
+      "toolType": "AI coding assistant",
+      "risk": "Medium",
+      "dataExposure": "Source code in the projects you open, terminal output, and anything you paste into its chat. Some modes can run commands on your PC.",
+      "pattern": "\\bSupermaven\\b",
+      "exclude": null,
+      "domains": [
+        "supermaven.com"
+      ]
+    },
+    {
+      "id": "monica",
+      "name": "Monica",
+      "vendor": "Monica",
+      "toolType": "AI browser sidebar",
+      "risk": "High",
+      "dataExposure": "The content of web pages you visit, and anything you select or type while it is active.",
+      "pattern": "\\bMonica\\b.*\\b(AI|GPT|ChatGPT|Claude|Gemini)\\b|\\bMonica AI\\b",
+      "exclude": null,
+      "domains": [
+        "monica.im"
+      ]
+    },
+    {
+      "id": "sider",
+      "name": "Sider",
+      "vendor": "Sider",
+      "toolType": "AI browser sidebar",
+      "risk": "High",
+      "dataExposure": "The content of web pages you visit, and anything you select or type while it is active.",
+      "pattern": "\\bSider\\b",
+      "exclude": null,
+      "domains": [
+        "sider.ai"
+      ]
+    },
+    {
+      "id": "merlin",
+      "name": "Merlin",
+      "vendor": "Foyer",
+      "toolType": "AI browser sidebar",
+      "risk": "High",
+      "dataExposure": "The content of web pages you visit, and anything you select or type while it is active.",
+      "pattern": "\\bMerlin\\b.*\\b(AI|GPT|ChatGPT)\\b|\\bgetmerlin\\b",
+      "exclude": null,
+      "domains": [
+        "getmerlin.in"
+      ]
+    },
+    {
+      "id": "maxai",
+      "name": "MaxAI",
+      "vendor": "MaxAI",
+      "toolType": "AI browser sidebar",
+      "risk": "High",
+      "dataExposure": "The content of web pages you visit, and anything you select or type while it is active.",
+      "pattern": "\\bMaxAI\\b",
+      "exclude": null,
+      "domains": [
+        "maxai.me",
+        "maxai.co"
+      ]
+    },
+    {
+      "id": "harpa",
+      "name": "HARPA AI",
+      "vendor": "HARPA AI",
+      "toolType": "AI browser sidebar",
+      "risk": "High",
+      "dataExposure": "The content of web pages you visit, and anything you select or type while it is active. It can also automate actions on websites.",
+      "pattern": "\\bHARPA\\b",
+      "exclude": null,
+      "domains": [
+        "harpa.ai"
+      ]
+    },
+    {
+      "id": "liner",
+      "name": "Liner",
+      "vendor": "Liner",
+      "toolType": "AI browser sidebar",
+      "risk": "Medium",
+      "dataExposure": "The content of web pages you visit, and anything you select or type while it is active.",
+      "pattern": "\\bLiner\\b.*\\bAI\\b|\\bgetliner\\b",
+      "exclude": null,
+      "domains": [
+        "getliner.com",
+        "liner.com"
+      ]
+    },
+    {
+      "id": "m365copilot",
+      "name": "Microsoft 365 Copilot",
+      "vendor": "Microsoft",
+      "toolType": "AI chat assistant",
+      "risk": "Medium",
+      "dataExposure": "Documents, email and chats in your Microsoft 365 account, plus anything you type into it.",
+      "pattern": "\\bMicrosoft 365 Copilot\\b|\\bMicrosoftOfficeHub\\b|\\bM365 Copilot\\b",
+      "exclude": null,
+      "domains": [
+        "m365copilot.com"
+      ]
+    },
+    {
+      "id": "mscopilot",
+      "name": "Microsoft Copilot",
+      "vendor": "Microsoft",
+      "toolType": "AI chat assistant",
+      "risk": "Medium",
+      "dataExposure": "Anything you type, paste or upload into the assistant, plus any files, screenshots or connected accounts you give it. With Copilot Vision it can also see your screen.",
+      "pattern": "\\bCopilot\\b",
+      "exclude": null,
+      "domains": [
+        "copilot.microsoft.com",
+        "sydney.bing.com"
+      ]
+    },
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "vendor": "OpenAI",
+      "toolType": "AI chat assistant",
+      "risk": "Medium",
+      "dataExposure": "Anything you type, paste or upload into the assistant, plus any files, screenshots or connected accounts you give it. The desktop app can also read content from other apps when you allow it.",
+      "pattern": "\\bChatGPT\\b|\\bOpenAI\\b",
+      "exclude": null,
+      "domains": [
+        "chatgpt.com",
+        "chat.openai.com",
+        "openai.com",
+        "oaiusercontent.com"
+      ]
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "vendor": "Anthropic",
+      "toolType": "AI chat assistant",
+      "risk": "Medium",
+      "dataExposure": "Anything you type, paste or upload into the assistant, plus any files, screenshots or connected accounts you give it. The desktop app can connect to local tools and files you approve.",
+      "pattern": "\\bClaude\\b|\\bAnthropic\\b",
+      "exclude": null,
+      "domains": [
+        "claude.ai",
+        "anthropic.com",
+        "claudeusercontent.com"
+      ]
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini",
+      "vendor": "Google",
+      "toolType": "AI chat assistant",
+      "risk": "Medium",
+      "dataExposure": "Anything you type, paste or upload into the assistant, plus any files, screenshots or connected accounts you give it.",
+      "pattern": "\\bGoogle Gemini\\b|\\bGemini\\b",
+      "exclude": "\\b(exchange|crypto|wallet|bitcoin|trading)\\b",
+      "domains": [
+        "gemini.google.com",
+        "bard.google.com"
+      ]
+    },
+    {
+      "id": "perplexity",
+      "name": "Perplexity",
+      "vendor": "Perplexity",
+      "toolType": "AI chat assistant",
+      "risk": "Medium",
+      "dataExposure": "Anything you type, paste or upload into the assistant, plus any files, screenshots or connected accounts you give it.",
+      "pattern": "\\bPerplexity\\b",
+      "exclude": null,
+      "domains": [
+        "perplexity.ai"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "vendor": "DeepSeek",
+      "toolType": "AI chat assistant",
+      "risk": "High",
+      "dataExposure": "Anything you type, paste or upload into the assistant, plus any files, screenshots or connected accounts you give it. DeepSeek's privacy policy states that data is stored on servers in the People's Republic of China.",
+      "pattern": "\\bDeepSeek\\b",
+      "exclude": null,
+      "domains": [
+        "deepseek.com"
+      ]
+    },
+    {
+      "id": "grok",
+      "name": "Grok",
+      "vendor": "xAI",
+      "toolType": "AI chat assistant",
+      "risk": "Medium",
+      "dataExposure": "Anything you type, paste or upload into the assistant, plus any files, screenshots or connected accounts you give it.",
+      "pattern": "\\bGrok\\b|\\bxAI\\b",
+      "exclude": null,
+      "domains": [
+        "grok.com",
+        "x.ai"
+      ]
+    },
+    {
+      "id": "metaai",
+      "name": "Meta AI",
+      "vendor": "Meta",
+      "toolType": "AI chat assistant",
+      "risk": "Medium",
+      "dataExposure": "Anything you type, paste or upload into the assistant, plus any files, screenshots or connected accounts you give it.",
+      "pattern": "\\bMeta AI\\b",
+      "exclude": null,
+      "domains": [
+        "meta.ai"
+      ]
+    },
+    {
+      "id": "mistral",
+      "name": "Le Chat",
+      "vendor": "Mistral AI",
+      "toolType": "AI chat assistant",
+      "risk": "Medium",
+      "dataExposure": "Anything you type, paste or upload into the assistant, plus any files, screenshots or connected accounts you give it.",
+      "pattern": "\\bMistral\\b|\\bLe Chat\\b",
+      "exclude": null,
+      "domains": [
+        "mistral.ai"
+      ]
+    },
+    {
+      "id": "poe",
+      "name": "Poe",
+      "vendor": "Quora",
+      "toolType": "AI chat assistant",
+      "risk": "Medium",
+      "dataExposure": "Anything you type, paste or upload into the assistant, plus any files, screenshots or connected accounts you give it.",
+      "pattern": "^Poe\\b|\\bPoe - Fast AI\\b",
+      "exclude": null,
+      "domains": [
+        "poe.com"
+      ]
+    },
+    {
+      "id": "kimi",
+      "name": "Kimi",
+      "vendor": "Moonshot AI",
+      "toolType": "AI chat assistant",
+      "risk": "Medium",
+      "dataExposure": "Anything you type, paste or upload into the assistant, plus any files, screenshots or connected accounts you give it.",
+      "pattern": "\\bKimi\\b|\\bMoonshot AI\\b",
+      "exclude": null,
+      "domains": [
+        "kimi.com",
+        "kimi.ai",
+        "moonshot.cn"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "vendor": "Alibaba",
+      "toolType": "AI chat assistant",
+      "risk": "Medium",
+      "dataExposure": "Anything you type, paste or upload into the assistant, plus any files, screenshots or connected accounts you give it.",
+      "pattern": "\\bQwen\\b|\\bTongyi\\b",
+      "exclude": null,
+      "domains": [
+        "qwen.ai",
+        "chat.qwen.ai"
+      ]
+    },
+    {
+      "id": "manus",
+      "name": "Manus",
+      "vendor": "Manus",
+      "toolType": "AI agent",
+      "risk": "High",
+      "dataExposure": "Tasks you delegate, files you upload, and websites it browses or signs in to for you.",
+      "pattern": "\\bManus\\b",
+      "exclude": null,
+      "domains": [
+        "manus.im"
+      ]
+    },
+    {
+      "id": "genspark",
+      "name": "Genspark",
+      "vendor": "Genspark",
+      "toolType": "AI agent",
+      "risk": "Medium",
+      "dataExposure": "Anything you type, paste or upload into the assistant, plus any files, screenshots or connected accounts you give it.",
+      "pattern": "\\bGenspark\\b",
+      "exclude": null,
+      "domains": [
+        "genspark.ai"
+      ]
+    },
+    {
+      "id": "huggingchat",
+      "name": "Hugging Face",
+      "vendor": "Hugging Face",
+      "toolType": "AI chat assistant",
+      "risk": "Low",
+      "dataExposure": "Anything you type, paste or upload into the assistant, plus any files, screenshots or connected accounts you give it.",
+      "pattern": "\\bHugging ?Face\\b|\\bHuggingChat\\b",
+      "exclude": null,
+      "domains": [
+        "huggingface.co"
+      ]
+    },
+    {
+      "id": "characterai",
+      "name": "Character.AI",
+      "vendor": "Character Technologies",
+      "toolType": "AI companion app",
+      "risk": "Medium",
+      "dataExposure": "Personal conversations, which may include sensitive details about your life and relationships.",
+      "pattern": "\\bCharacter\\.?AI\\b",
+      "exclude": null,
+      "domains": [
+        "character.ai"
+      ]
+    },
+    {
+      "id": "replika",
+      "name": "Replika",
+      "vendor": "Luka",
+      "toolType": "AI companion app",
+      "risk": "Medium",
+      "dataExposure": "Personal conversations, which may include sensitive details about your life and relationships.",
+      "pattern": "\\bReplika\\b",
+      "exclude": null,
+      "domains": [
+        "replika.com",
+        "replika.ai"
+      ]
+    },
+    {
+      "id": "pi",
+      "name": "Pi",
+      "vendor": "Inflection AI",
+      "toolType": "AI companion app",
+      "risk": "Medium",
+      "dataExposure": "Personal conversations, which may include sensitive details about your life and relationships.",
+      "pattern": "\\bInflection AI\\b|^Pi, your personal AI",
+      "exclude": null,
+      "domains": [
+        "pi.ai"
+      ]
+    },
+    {
+      "id": "talkie",
+      "name": "Talkie",
+      "vendor": "MiniMax",
+      "toolType": "AI companion app",
+      "risk": "Medium",
+      "dataExposure": "Personal conversations, which may include sensitive details about your life and relationships.",
+      "pattern": "\\bTalkie\\b",
+      "exclude": null,
+      "domains": [
+        "talkie-ai.com"
+      ]
+    },
+    {
+      "id": "grammarly",
+      "name": "Grammarly",
+      "vendor": "Grammarly",
+      "toolType": "AI writing assistant",
+      "risk": "Medium",
+      "dataExposure": "Text you type in apps and websites where it is active, including emails and documents.",
+      "pattern": "\\bGrammarly\\b",
+      "exclude": null,
+      "domains": [
+        "grammarly.com",
+        "grammarly.io"
+      ]
+    },
+    {
+      "id": "quillbot",
+      "name": "QuillBot",
+      "vendor": "QuillBot",
+      "toolType": "AI writing assistant",
+      "risk": "Medium",
+      "dataExposure": "Text you type in apps and websites where it is active, including emails and documents.",
+      "pattern": "\\bQuillBot\\b",
+      "exclude": null,
+      "domains": [
+        "quillbot.com"
+      ]
+    },
+    {
+      "id": "wordtune",
+      "name": "Wordtune",
+      "vendor": "AI21 Labs",
+      "toolType": "AI writing assistant",
+      "risk": "Medium",
+      "dataExposure": "Text you type in apps and websites where it is active, including emails and documents.",
+      "pattern": "\\bWordtune\\b",
+      "exclude": null,
+      "domains": [
+        "wordtune.com"
+      ]
+    },
+    {
+      "id": "deepl",
+      "name": "DeepL",
+      "vendor": "DeepL",
+      "toolType": "AI writing assistant",
+      "risk": "Low",
+      "dataExposure": "Text you translate or ask it to rewrite.",
+      "pattern": "\\bDeepL\\b",
+      "exclude": null,
+      "domains": [
+        "deepl.com"
+      ]
+    },
+    {
+      "id": "jasper",
+      "name": "Jasper",
+      "vendor": "Jasper AI",
+      "toolType": "AI writing assistant",
+      "risk": "Medium",
+      "dataExposure": "Text you type in apps and websites where it is active, including emails and documents.",
+      "pattern": "\\bJasper ?AI\\b|\\bJasper\\.ai\\b",
+      "exclude": null,
+      "domains": [
+        "jasper.ai"
+      ]
+    },
+    {
+      "id": "writesonic",
+      "name": "Writesonic",
+      "vendor": "Writesonic",
+      "toolType": "AI writing assistant",
+      "risk": "Medium",
+      "dataExposure": "Text you type in apps and websites where it is active, including emails and documents.",
+      "pattern": "\\bWritesonic\\b",
+      "exclude": null,
+      "domains": [
+        "writesonic.com"
+      ]
+    },
+    {
+      "id": "copyai",
+      "name": "Copy.ai",
+      "vendor": "Copy.ai",
+      "toolType": "AI writing assistant",
+      "risk": "Medium",
+      "dataExposure": "Text you type in apps and websites where it is active, including emails and documents.",
+      "pattern": "\\bCopy\\.ai\\b",
+      "exclude": null,
+      "domains": [
+        "copy.ai"
+      ]
+    },
+    {
+      "id": "notionai",
+      "name": "Notion AI",
+      "vendor": "Notion",
+      "toolType": "AI writing assistant",
+      "risk": "Low",
+      "dataExposure": "Pages and databases in your Notion workspace.",
+      "pattern": "\\bNotion AI\\b",
+      "exclude": null,
+      "domains": []
+    },
+    {
+      "id": "ollama",
+      "name": "Ollama",
+      "vendor": "Ollama",
+      "toolType": "Local AI model runner",
+      "risk": "Low",
+      "dataExposure": "Prompts and files stay on your PC by default, but a local network service may be exposed to other programs.",
+      "pattern": "\\bOllama\\b",
+      "exclude": null,
+      "domains": [
+        "ollama.com",
+        "ollama.ai"
+      ]
+    },
+    {
+      "id": "lmstudio",
+      "name": "LM Studio",
+      "vendor": "Element Labs",
+      "toolType": "Local AI model runner",
+      "risk": "Low",
+      "dataExposure": "Prompts and files stay on your PC by default, but a local network service may be exposed to other programs.",
+      "pattern": "\\bLM ?Studio\\b|\\bElement Labs\\b",
+      "exclude": null,
+      "domains": [
+        "lmstudio.ai"
+      ]
+    },
+    {
+      "id": "gpt4all",
+      "name": "GPT4All",
+      "vendor": "Nomic AI",
+      "toolType": "Local AI model runner",
+      "risk": "Low",
+      "dataExposure": "Prompts and files stay on your PC by default, but a local network service may be exposed to other programs.",
+      "pattern": "\\bGPT4All\\b|\\bNomic\\b",
+      "exclude": null,
+      "domains": [
+        "nomic.ai"
+      ]
+    },
+    {
+      "id": "jan",
+      "name": "Jan",
+      "vendor": "Menlo Research",
+      "toolType": "Local AI model runner",
+      "risk": "Low",
+      "dataExposure": "Prompts and files stay on your PC by default, but a local network service may be exposed to other programs.",
+      "pattern": "^Jan(\\.exe)?$|\\bjan\\.ai\\b",
+      "exclude": null,
+      "domains": [
+        "jan.ai"
+      ]
+    },
+    {
+      "id": "anythingllm",
+      "name": "AnythingLLM",
+      "vendor": "Mintplex Labs",
+      "toolType": "Local AI model runner",
+      "risk": "Low",
+      "dataExposure": "Prompts and files stay on your PC by default, but a local network service may be exposed to other programs.",
+      "pattern": "\\bAnythingLLM\\b",
+      "exclude": null,
+      "domains": [
+        "anythingllm.com"
+      ]
+    }
+  ],
+  "embeddedApps": [
+    {
+      "id": "office",
+      "appName": "Microsoft Office",
+      "feature": "Copilot",
+      "vendor": "Microsoft",
+      "risk": "Medium",
+      "exposure": "Documents, spreadsheets, presentations and emails you work on, when Copilot or other connected experiences are used.",
+      "howToTurnOff": "Turn off “Office content analysis” on the AI Protection page. In Microsoft 365 Personal or Family you can also open Word, Excel or PowerPoint, go to File › Options › Copilot, and clear Enable Copilot.",
+      "pattern": "^Microsoft (365|Office)\\b",
+      "exclude": "\\b(Copilot|Language Pack|Proofing|Access database engine|Click-to-Run|Extensibility|Shared|MUI)\\b",
+      "policyIds": [
+        "office-content"
+      ]
+    },
+    {
+      "id": "teams",
+      "appName": "Microsoft Teams",
+      "feature": "Copilot and intelligent meeting recap",
+      "vendor": "Microsoft",
+      "risk": "Medium",
+      "exposure": "Meeting audio and transcripts, chats and shared files.",
+      "howToTurnOff": "AI in work or school Teams is controlled by your organization's Microsoft 365 admin. In personal Teams, don't start recap or Copilot in meetings with sensitive topics.",
+      "pattern": "\\bMicrosoft Teams\\b|^MSTeams$",
+      "exclude": "\\b(Add-in|Installer)\\b",
+      "policyIds": []
+    },
+    {
+      "id": "acrobat",
+      "appName": "Adobe Acrobat",
+      "feature": "AI Assistant",
+      "vendor": "Adobe",
+      "risk": "Medium",
+      "exposure": "PDFs you open with AI Assistant and the questions you ask about them, processed in Adobe's cloud.",
+      "howToTurnOff": "Turn off “AI Assistant in Adobe Acrobat” (and the Reader version) on the AI Protection page.",
+      "pattern": "\\bAdobe Acrobat\\b",
+      "exclude": null,
+      "policyIds": [
+        "acrobat-ai",
+        "reader-ai"
+      ]
+    },
+    {
+      "id": "photoshop",
+      "appName": "Adobe Photoshop",
+      "feature": "Generative Fill (Firefly)",
+      "vendor": "Adobe",
+      "risk": "Low",
+      "exposure": "Images and selections you use generative features on, processed in Adobe's cloud.",
+      "howToTurnOff": "Generative features only send content when you use them. Avoid them on sensitive images, and review the privacy settings in your Adobe account.",
+      "pattern": "\\bAdobe Photoshop\\b",
+      "exclude": null,
+      "policyIds": []
+    },
+    {
+      "id": "zoom",
+      "appName": "Zoom",
+      "feature": "AI Companion",
+      "vendor": "Zoom",
+      "risk": "High",
+      "exposure": "Meeting audio, video, chat and transcripts, used for summaries and smart recordings.",
+      "howToTurnOff": "Sign in at zoom.us, open Settings, choose the AI Companion tab, and turn off the features you don't want. The meeting host decides whether summaries are created.",
+      "pattern": "\\bZoom\\b",
+      "exclude": "\\b(Plugin|Plug-in|Outlook|Rooms)\\b",
+      "policyIds": []
+    },
+    {
+      "id": "slack",
+      "appName": "Slack",
+      "feature": "Slack AI",
+      "vendor": "Salesforce",
+      "risk": "Medium",
+      "exposure": "Messages and files in channels you can see, used for summaries and search answers.",
+      "howToTurnOff": "Slack AI is controlled by your workspace owner. Ask them, or check your workspace's admin settings.",
+      "pattern": "^Slack\\b",
+      "exclude": null,
+      "policyIds": []
+    },
+    {
+      "id": "webex",
+      "appName": "Webex",
+      "feature": "AI Assistant",
+      "vendor": "Cisco",
+      "risk": "Medium",
+      "exposure": "Meeting audio and transcripts, used for summaries and action items.",
+      "howToTurnOff": "The meeting host or your Webex admin controls AI Assistant. Check Webex's meeting settings before sensitive calls.",
+      "pattern": "\\bWebex\\b",
+      "exclude": null,
+      "policyIds": []
+    },
+    {
+      "id": "notion",
+      "appName": "Notion",
+      "feature": "Notion AI",
+      "vendor": "Notion",
+      "risk": "Low",
+      "exposure": "Pages and databases in your workspace when you use AI features.",
+      "howToTurnOff": "In Notion, open Settings and look for the Notion AI section to manage AI features for your workspace.",
+      "pattern": "^Notion$|^Notion \\d",
+      "exclude": null,
+      "policyIds": []
+    },
+    {
+      "id": "canva",
+      "appName": "Canva",
+      "feature": "Magic Studio",
+      "vendor": "Canva",
+      "risk": "Low",
+      "exposure": "Designs, text and images you use Magic features on.",
+      "howToTurnOff": "In Canva, open Settings › Privacy settings and review whether your content can be used to train AI.",
+      "pattern": "^Canva\\b",
+      "exclude": null,
+      "policyIds": []
+    },
+    {
+      "id": "dropbox",
+      "appName": "Dropbox",
+      "feature": "Dropbox AI",
+      "vendor": "Dropbox",
+      "risk": "Medium",
+      "exposure": "Files you ask Dropbox AI to summarize or search, which may be processed by Dropbox's AI partners.",
+      "howToTurnOff": "Sign in at dropbox.com, open your account settings, and review the AI-related options.",
+      "pattern": "^Dropbox\\b",
+      "exclude": "\\b(Update|Helper)\\b",
+      "policyIds": []
+    },
+    {
+      "id": "opera",
+      "appName": "Opera",
+      "feature": "Aria AI assistant",
+      "vendor": "Opera",
+      "risk": "Medium",
+      "exposure": "The page you're on and anything you ask Aria, processed in Opera's cloud.",
+      "howToTurnOff": "In Opera, open Settings, search for “Aria”, and turn it off. You can also hide it from the sidebar.",
+      "pattern": "^Opera( GX)?( Stable)?\\b",
+      "exclude": null,
+      "policyIds": []
+    },
+    {
+      "id": "brave",
+      "appName": "Brave",
+      "feature": "Leo AI assistant",
+      "vendor": "Brave",
+      "risk": "Low",
+      "exposure": "The page you're on and your questions, when you use Leo.",
+      "howToTurnOff": "Turn off “Leo AI in Brave” on the AI Protection page.",
+      "pattern": "^Brave\\b",
+      "exclude": "\\bUpdate\\b",
+      "policyIds": [
+        "brave-leo"
+      ]
+    },
+    {
+      "id": "firefox",
+      "appName": "Mozilla Firefox",
+      "feature": "AI chatbot sidebar",
+      "vendor": "Mozilla",
+      "risk": "Low",
+      "exposure": "Text you select and send to the AI chatbot provider you choose.",
+      "howToTurnOff": "In Firefox, open Settings, search for “chatbot”, and turn off the AI chatbot.",
+      "pattern": "\\bMozilla Firefox\\b",
+      "exclude": null,
+      "policyIds": []
+    }
+  ],
+  "engineFiles": [
+    {
+      "pattern": "^(llama|libllama|ggml|libggml|ggml-[\\w-]+|llamafile)\\.(dll|exe)$|^llama-(server|cli)\\.exe$",
+      "component": "llama.cpp",
+      "weight": 3,
+      "whatItDoes": "runs large language models (chatbots) on this PC"
+    },
+    {
+      "pattern": "^(whisper|libwhisper)\\.dll$",
+      "component": "Whisper",
+      "weight": 3,
+      "whatItDoes": "turns speech into text"
+    },
+    {
+      "pattern": "^(mlc_llm|tvm_runtime)\\.dll$",
+      "component": "MLC LLM",
+      "weight": 3,
+      "whatItDoes": "runs large language models on this PC"
+    },
+    {
+      "pattern": "^ctranslate2\\.dll$",
+      "component": "CTranslate2",
+      "weight": 2,
+      "whatItDoes": "runs speech and translation models"
+    },
+    {
+      "pattern": "^(torch_cpu|torch_cuda|c10)\\.dll$",
+      "component": "PyTorch",
+      "weight": 2,
+      "whatItDoes": "runs machine-learning models"
+    },
+    {
+      "pattern": "^(tensorflow|libtensorflow|tensorflow_framework)[\\w.-]*\\.dll$|^_pywrap_tensorflow_internal\\.pyd$",
+      "component": "TensorFlow",
+      "weight": 2,
+      "whatItDoes": "runs machine-learning models"
+    },
+    {
+      "pattern": "^onnxruntime[\\w.-]*\\.dll$",
+      "component": "ONNX Runtime",
+      "weight": 1,
+      "whatItDoes": "runs AI models on this PC"
+    },
+    {
+      "pattern": "^openvino[\\w.-]*\\.dll$",
+      "component": "OpenVINO",
+      "weight": 1,
+      "whatItDoes": "speeds up AI models on Intel hardware"
+    },
+    {
+      "pattern": "^directml\\.dll$",
+      "component": "DirectML",
+      "weight": 1,
+      "whatItDoes": "speeds up AI models on your graphics card"
+    }
+  ]
+}

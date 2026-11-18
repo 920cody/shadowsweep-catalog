@@ -1,0 +1,78 @@
+# Publishes the catalog whenever catalog.json changes on main (for example when you merge
+# a "New AI tools found" pull request). Checks it, gives it a new version number,
+# signs it with your private key, and puts it on GitHub Pages for ShadowSweep to download.
+name: Publish catalog
+
+on:
+  push:
+    branches: [main]
+    paths: ['catalog.json', 'safe-app-names.txt']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Build the signing tool
+        run: dotnet build signer -c Release -o "$RUNNER_TEMP/signer"
+
+      - name: Check catalog.json
+        run: dotnet "$RUNNER_TEMP/signer/sswkeygen.dll" catalog-validate --in catalog.json
+
+      # During first-time setup the key or Pages may not be ready yet; skip quietly instead of failing.
+      - name: Check setup
+        id: preflight
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HAS_KEY: ${{ secrets.SSW_PRIVATE_KEY != '' }}
+        run: |
+          ok=true
+          if [ "$HAS_KEY" != "true" ]; then
+            echo "::warning::The SSW_PRIVATE_KEY secret isn't set, so nothing was published. Run the setup script again."
+            ok=false
+          fi
+          if ! gh api "repos/${{ github.repository }}/pages" > /dev/null 2>&1; then
+            echo "::warning::GitHub Pages isn't turned on yet, so nothing was published. Run the setup script again."
+            ok=false
+          fi
+          echo "ok=$ok" >> "$GITHUB_OUTPUT"
+
+      - name: Sign
+        if: steps.preflight.outputs.ok == 'true'
+        env:
+          SSW_PRIVATE_KEY_TEXT: ${{ secrets.SSW_PRIVATE_KEY }}
+        run: |
+          mkdir -p site
+          printf '%s' "$SSW_PRIVATE_KEY_TEXT" > "$RUNNER_TEMP/private.key"
+          dotnet "$RUNNER_TEMP/signer/sswkeygen.dll" catalog-sign --in catalog.json --out site/catalog.signed.json --version auto --key "$RUNNER_TEMP/private.key"
+          dotnet "$RUNNER_TEMP/signer/sswkeygen.dll" catalog-verify site/catalog.signed.json --key "$RUNNER_TEMP/private.key"
+          rm -f "$RUNNER_TEMP/private.key"
+          printf '%s\n' '<!doctype html><meta charset="utf-8"><title>ShadowSweep detection catalog</title><p>ShadowSweep detection catalog: <a href="catalog.signed.json">catalog.signed.json</a></p>' > site/index.html
+          touch site/.nojekyll
+
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.preflight.outputs.ok == 'true'
+        with:
+          path: site
+
+      - id: deploy
+        if: steps.preflight.outputs.ok == 'true'
+        uses: actions/deploy-pages@v4

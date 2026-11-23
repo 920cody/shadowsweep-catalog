@@ -4,6 +4,216 @@
   "notes": "Edit this file and commit. The Publish workflow validates, versions, signs and publishes it automatically.",
   "signatures": [
     {
+      "id": "foundry-toolkit-for-vs-code",
+      "name": "Foundry Toolkit for VS Code",
+      "vendor": "Microsoft",
+      "toolType": "AI coding assistant",
+      "risk": "Medium",
+      "dataExposure": "Source code in the projects you open, terminal output, and anything you paste into its chat. Some modes can run commands on your PC.",
+      "pattern": "^ms\\-windows\\-ai\\-studio\\.windows\\-ai\\-studio$|(?<!\\w)Foundry\\ Toolkit\\ for\\ VS\\ Code(?!\\w)",
+      "exclude": null,
+      "domains": [],
+      "examples": [
+        "Foundry Toolkit for VS Code"
+      ]
+    },
+    {
+      "id": "keploy-api-testing-mocks-service-virtual",
+      "name": "Keploy: API Testing, Mocks & Service Virtualization",
+      "vendor": "Keploy Unit and API Test Generator using AI",
+      "toolType": "AI coding assistant",
+      "risk": "Medium",
+      "dataExposure": "Source code in the projects you open, terminal output, and anything you paste into its chat. Some modes can run commands on your PC.",
+      "pattern": "^Keploy\\.keployio$|(?<!\\w)Keploy:\\ API\\ Testing,\\ Mocks\\ \\&\\ Service\\ Virtualization(?!\\w)",
+      "exclude": null,
+      "domains": [],
+      "examples": [
+        "Keploy: API Testing, Mocks & Service Virtualization"
+      ]
+    },
+    {
+      "id": "duckduckgo-search-tracker-protection",
+      "name": "DuckDuckGo Search & Tracker Protection",
+      "vendor": "DuckDuckGo",
+      "toolType": "AI browser sidebar",
+      "risk": "High",
+      "dataExposure": "The content of web pages you visit, and anything you select or type while it is active.",
+      "pattern": "(?<!\\w)DuckDuckGo\\ Search\\ \\&\\ Tracker\\ Protection(?!\\w)|^jid1\\-ZAdIEUB7XOzOJw@jetpack$",
+      "exclude": null,
+      "domains": [],
+      "examples": [
+        "DuckDuckGo Search & Tracker Protection"
+      ]
+    },
+    {
+      "id": "agentforce-vibes",
+      "name": "Agentforce Vibes",
+      "vendor": "Salesforce",
+      "toolType": "AI coding assistant",
+      "risk": "Medium",
+      "dataExposure": "Source code in the projects you open, terminal output, and anything you paste into its chat. Some modes can run commands on your PC.",
+      "pattern": "^salesforce\\.salesforcedx\\-einstein\\-gpt$|(?<!\\w)Agentforce\\ Vibes(?!\\w)",
+      "exclude": null,
+      "domains": [],
+      "examples": [
+        "Agentforce Vibes"
+      ]
+    },
+    {
+      "id": "qodo-ai-code-review",
+      "name": "Qodo: AI Code Review",
+      "vendor": "Qodo (formerly Codium)",
+      "toolType": "AI coding assistant",
+      "risk": "Medium",
+      "dataExposure": "Source code in the projects you open, terminal output, and anything you paste into its chat. Some modes can run commands on your PC.",
+      "pattern": "^Codium\\.codium$|(?<!\\w)Qodo:\\ AI\\ Code\\ Review(?!\\w)",
+      "exclude": null,
+      "domains": [],
+      "examples": [
+        "Qodo: AI Code Review"
+      ]
+    },
+    {
+      "id": "cody-ai-code-assistant",
+      "name": "Cody: AI Code Assistant",
+      "vendor": "Sourcegraph",
+      "toolType": "AI coding assistant",
+      "risk": "Medium",
+      "dataExposure": "Source code in the projects you open, terminal output, and anything you paste into its chat. Some modes can run commands on your PC.",
+      "pattern": "^sourcegraph\\.cody\\-ai$|(?<!\\w)Cody:\\ AI\\ Code\\ Assistant(?!\\w)",
+      "exclude": null,
+      "domains": [],
+      "examples": [
+        "Cody: AI Code Assistant"
+      ]
+    },
+    {
+      "id": "augment-coding-agent-built-for-large-com",
+      "name": "Augment: Coding Agent Built for Large, Complex Codebases",
+      "vendor": "Augment Computing",
+      "toolType": "AI coding assistant",
+      "risk": "Medium",
+      "dataExposure": "Source code in the projects you open, terminal output, and anything you paste into its chat. Some modes can run commands on your PC.",
+      "pattern": "^augment\\.vscode\\-augment$|(?<!\\w)Augment:\\ Coding\\ Agent\\ Built\\ for\\ Large,\\ Complex\\ Codebases(?!\\w)",
+      "exclude": null,
+      "domains": [],
+      "examples": [
+        "Augment: Coding Agent Built for Large, Complex Codebases"
+      ]
+    },
+    {
+      "id": "dbcode-sql-database-client-for-postgres-",
+      "name": "DBCode - SQL & Database Client for Postgres, MySQL, MongoDB & more",
+      "vendor": "DBCode",
+      "toolType": "AI coding assistant",
+      "risk": "Medium",
+      "dataExposure": "Source code in the projects you open, terminal output, and anything you paste into its chat. Some modes can run commands on your PC.",
+      "pattern": "^DBCode\\.dbcode$|(?<!\\w)DBCode\\ \\-\\ SQL\\ \\&\\ Database\\ Client\\ for\\ Postgres,\\ MySQL,\\ MongoDB\\ \\&\\ more(?!\\w)",
+      "exclude": null,
+      "domains": [],
+      "examples": [
+        "DBCode - SQL & Database Client for Postgres, MySQL, MongoDB & more"
+      ]
+    },
+    {
+      "id": "coderabbit",
+      "name": "CodeRabbit",
+      "vendor": "CodeRabbit Inc.",
+      "toolType": "AI coding assistant",
+      "risk": "Medium",
+      "dataExposure": "Source code in the projects you open, terminal output, and anything you paste into its chat. Some modes can run commands on your PC.",
+      "pattern": "^CodeRabbit\\.coderabbit\\-vscode$|(?<!\\w)CodeRabbit(?!\\w)",
+      "exclude": null,
+      "domains": [],
+      "examples": [
+        "CodeRabbit"
+      ]
+    },
+    {
+      "id": "full-page-screenshot-screen-capture-by-f",
+      "name": "Full Page Screenshot - Screen Capture by FireShot",
+      "vendor": "TruePage Solutions",
+      "toolType": "AI browser sidebar",
+      "risk": "High",
+      "dataExposure": "The content of web pages you visit, and anything you select or type while it is active.",
+      "pattern": "(?<!\\w)Full\\ Page\\ Screenshot\\ \\-\\ Screen\\ Capture\\ by\\ FireShot(?!\\w)|^\\{0b457cAA\\-602d\\-484a\\-8fe7\\-c1d894a011ba\\}$",
+      "exclude": null,
+      "domains": [],
+      "examples": [
+        "Full Page Screenshot - Screen Capture by FireShot"
+      ]
+    },
+    {
+      "id": "supabase",
+      "name": "Supabase",
+      "vendor": "Supabase",
+      "toolType": "AI coding assistant",
+      "risk": "Medium",
+      "dataExposure": "Source code in the projects you open, terminal output, and anything you paste into its chat. Some modes can run commands on your PC.",
+      "pattern": "^Supabase\\.vscode\\-supabase\\-extension$|(?<!\\w)Supabase(?!\\w)",
+      "exclude": null,
+      "domains": [],
+      "examples": [
+        "Supabase"
+      ]
+    },
+    {
+      "id": "context7-mcp-server",
+      "name": "Context7 MCP Server",
+      "vendor": "Upstash",
+      "toolType": "AI coding assistant",
+      "risk": "Medium",
+      "dataExposure": "Source code in the projects you open, terminal output, and anything you paste into its chat. Some modes can run commands on your PC.",
+      "pattern": "^Upstash\\.context7\\-mcp$|(?<!\\w)Context7\\ MCP\\ Server(?!\\w)",
+      "exclude": null,
+      "domains": [],
+      "examples": [
+        "Context7 MCP Server"
+      ]
+    },
+    {
+      "id": "opencode-gui",
+      "name": "OpenCode GUI",
+      "vendor": "Tanishq Kancharla",
+      "toolType": "AI coding assistant",
+      "risk": "Medium",
+      "dataExposure": "Source code in the projects you open, terminal output, and anything you paste into its chat. Some modes can run commands on your PC.",
+      "pattern": "^TanishqKancharla\\.opencode\\-vscode$|(?<!\\w)OpenCode\\ GUI(?!\\w)",
+      "exclude": null,
+      "domains": [],
+      "examples": [
+        "OpenCode GUI"
+      ]
+    },
+    {
+      "id": "zoo-code",
+      "name": "Zoo Code",
+      "vendor": "Zoo Code Organization",
+      "toolType": "AI coding assistant",
+      "risk": "Medium",
+      "dataExposure": "Source code in the projects you open, terminal output, and anything you paste into its chat. Some modes can run commands on your PC.",
+      "pattern": "^ZooCodeOrganization\\.zoo\\-code$|(?<!\\w)Zoo\\ Code(?!\\w)",
+      "exclude": null,
+      "domains": [],
+      "examples": [
+        "Zoo Code"
+      ]
+    },
+    {
+      "id": "codebuddy-ai-coding-assistant-with-multi",
+      "name": "Codebuddy — AI Coding Assistant with Multi-File Diffs",
+      "vendor": "Codebuddy AI Inc.",
+      "toolType": "AI coding assistant",
+      "risk": "Medium",
+      "dataExposure": "Source code in the projects you open, terminal output, and anything you paste into its chat. Some modes can run commands on your PC.",
+      "pattern": "^CodebuddyAI\\.codebuddy\\-ai$|(?<!\\w)Codebuddy\\ —\\ AI\\ Coding\\ Assistant\\ with\\ Multi\\-File\\ Diffs(?!\\w)",
+      "exclude": null,
+      "domains": [],
+      "examples": [
+        "Codebuddy — AI Coding Assistant with Multi-File Diffs"
+      ]
+    },
+    {
       "id": "rewind",
       "name": "Rewind",
       "vendor": "Rewind AI",
